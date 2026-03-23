@@ -1,20 +1,54 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# PDF 水印工具 (PDF Watermark Tool)
 
-# Run and deploy your AI Studio app
+一个纯前端实现的轻量级 PDF 水印添加工具。所有的 PDF 处理都在您的浏览器中本地完成，文件不会上传到任何服务器，最大程度地保证了您的文档和数据安全。
 
-This contains everything you need to run your app locally.
+## ✨ 功能特点
 
-View your app in AI Studio: https://ai.studio/apps/de387f74-5714-4418-a51e-e6bdb4562ce9
+* **🔒 纯本地处理**：基于浏览器本地处理，无需上传文件，保护隐私安全。
+* **🇨🇳 完美支持中文**：内置霞鹜文楷 Lite 字体，完美支持中文字符水印。
+* **🎨 高度可定制**：
+  * 自定义水印文本内容。
+  * 自由调整字体大小、透明度、旋转角度和颜色。
+* **📐 两种布局模式**：
+  * **居中单行**：在页面正中央添加单个水印。
+  * **平铺满页**：将水印以交错（类似砖块）的方式铺满整个页面，并支持自定义水平和垂直间距。
+* **👀 实时预览**：提供概念性的可视化预览，在下载前即可直观感受水印的大致布局和样式。
 
-## Run Locally
+## 🛠️ 技术栈
 
-**Prerequisites:**  Node.js
+* **框架**: [React](https://react.dev/) 19 + [TypeScript](https://www.typescriptlang.org/)
+* **构建工具**: [Vite](https://vitejs.dev/)
+* **样式**: [Tailwind CSS](https://tailwindcss.com/)
+* **PDF 处理**: [pdf-lib](https://pdf-lib.js.org/) (用于读取、修改和生成 PDF)
+* **字体支持**: [@pdf-lib/fontkit](https://github.com/Hopding/fontkit) (用于嵌入自定义中文字体)
+* **图标**: [Lucide React](https://lucide.dev/)
 
+## 📖 使用说明
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. **上传文件**：点击左侧的上传区域，或将 PDF 文件拖拽到该区域。
+2. **设置水印**：在右侧的“水印设置”面板中输入您想要的水印文本。
+3. **调整样式**：
+   * 选择“布局模式”（居中单行 或 平铺满页）。
+   * 如果选择“平铺满页”，可进一步调整水平和垂直间距。
+   * 调整字体大小、透明度、旋转角度和颜色。
+4. **预览效果**：观察左侧的预览窗口，确认水印的大致布局。
+5. **下载文件**：点击底部的“下载加水印后的 PDF”按钮，处理完成后浏览器会自动下载文件。
+
+## 💻 本地开发
+
+克隆项目后，在项目根目录下运行以下命令：
+
+```bash
+# 安装依赖
+npm install
+
+# 启动本地开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
+```
+
+## 📄 许可证
+
+MIT License
