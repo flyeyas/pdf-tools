@@ -1,0 +1,5 @@
+{
+  "name": "PDF 水印工具",
+  "description": "一个为 PDF 文件添加文本水印的工具。",
+  "requestFramePermissions": []
+}
